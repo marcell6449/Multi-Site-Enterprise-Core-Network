@@ -9,28 +9,18 @@ This project recreates the core pieces of an enterprise WAN(World Area network) 
 ## Architecture
 
 
-┌─────────────────────────────────────────────┐
-│        i3, 8GB — Proxmox VE host             │
-│                                               │
-│   ┌──────────────┐      ┌──────────────┐     │
-│   │ Site A router │      │ Site B router │    │
-│   │ OPNsense/VyOS │      │ OPNsense/VyOS │    │
-│   └───────┬───────┘      └───────┬───────┘    │
-│           └───────┬──────────────┘            │
-│                ┌───▼────────┐                 │
-│                │ LibreNMS VM │                │
-│                │ SNMP + alerts│               │
-│                └────────────┘                 │
-└──────────────────┬────────────────────────────┘
-                    │ WireGuard tunnels
-      ┌─────────────┴─────────────┐
-      │                           │
-┌─────▼──────────┐        ┌───────▼─────────┐
-│ Laptop, 4GB     │        │ Raspberry Pi     │
-│ Site C router    │        │ Pi-hole DNS      │
-│ + WireGuard      │        │ WireGuard client │
-└──────────────────┘        │ + snmpd agent    │
-                             └──────────────────┘
+Proxmox VE host (i3, 8GB)
+├── OPNsense/VyOS — Site A router
+├── OPNsense/VyOS — Site B router
+└── LibreNMS VM
+    └── SNMP + alerts
+
+WireGuard tunnels
+├── Laptop, 4GB
+│   └── WireGuard client
+└── Raspberry Pi — Site C router
+    ├── Pi-hole DNS
+    └── WireGuard client + snmpd agent
 
 ## Hardware
 

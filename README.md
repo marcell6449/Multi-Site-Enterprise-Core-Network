@@ -8,7 +8,7 @@ This project recreates the core pieces of an enterprise WAN(World Area network) 
 
 ## Architecture
 
-
+"""
 Proxmox VE host (i3, 8GB)
 ├── OPNsense/VyOS — Site A router
 ├── OPNsense/VyOS — Site B router
@@ -21,7 +21,7 @@ WireGuard tunnels
 └── Raspberry Pi — Site C router
     ├── Pi-hole DNS
     └── WireGuard client + snmpd agent
-
+"""
 ## Hardware
 
 | Role | Device | Specs |

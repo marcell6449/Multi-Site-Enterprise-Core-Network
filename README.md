@@ -26,7 +26,7 @@ WireGuard tunnels
 
 | Role | Device | Specs |
 |---|---|---|
-| Core hypervisor | Primary PC | i3 10th Gen, 8 GB RAM |
+| Core hypervisor | Lenovo IdeaPad 3 (Model 81WA) (x64-based PC) | Intel Core i3 / , 8 GB DDR4 (7.84 GB usable), Storage / Disk: System drive on Partition 1 (\Device\HarddiskVolume1) with page file active, Intel Wireless-AC 9560 (Wi-Fi 5), Bluetooth Adapter (PAN), Fully supported (VT-x enabled in BIOS, Second Level Address Translation, SLAT) |
 | Site C node | Secondary laptop | Low-spec, 4 GB RAM |
 | Remote edge | Raspberry Pi | <1 GB RAM |
 

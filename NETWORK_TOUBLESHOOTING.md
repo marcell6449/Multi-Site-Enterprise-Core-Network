@@ -66,4 +66,3 @@ iface vmbr1 inet static
     post-up echo 1 > /proc/sys/net/ipv4/ip_forward
     post-up iptables -t nat -F POSTROUTING
     post-up iptables -t nat -A POSTROUTING -s 10.10.10.0/24 -o enx000000000000 -j MASQUERADE
-'''

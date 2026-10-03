@@ -10,8 +10,8 @@ This project recreates the core pieces of an enterprise WAN(World Area network) 
 
 ```
 Proxmox VE host (i3, 8GB)
-├── OPNsense/VyOS — Site A router
-├── OPNsense/VyOS — Site B router
+├── Container
+├── NAS
 └── LibreNMS VM
     └── SNMP + alerts
 
